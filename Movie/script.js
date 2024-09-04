@@ -1,4 +1,4 @@
-let currentIndex = 0;
+let currentIndex = 0; // Track the current index of the active slide
 
 function updateSlides() {
     const slides = document.querySelectorAll('.movie');
@@ -30,15 +30,23 @@ function updateSlides() {
     });
 }
 
-function prevMovie() {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : document.querySelectorAll('.movie').length - 1;
-    updateSlides();
-}
+// Event listener for keydown events
+document.addEventListener('keydown', (event) => {
+    const slides = document.querySelectorAll('.movie');
+    const totalSlides = slides.length;
+    
+    switch (event.keyCode) {
+        case 37: // Left arrow key
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlides();
+            break;
+        case 39: // Right arrow key
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlides();
+            break;
+    }
+});
 
-function nextMovie() {
-    currentIndex = (currentIndex < document.querySelectorAll('.movie').length - 1) ? currentIndex + 1 : 0;
-    updateSlides();
-}
-
-// Initialize the first movie as active
+// Initial update to position slides correctly
 updateSlides();
+

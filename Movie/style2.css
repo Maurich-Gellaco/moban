@@ -12,7 +12,7 @@ header {
     display: flex;
     align-items: center;
     padding: 12px;
-    background-color: #333;
+    background-color: #3333336f;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -27,6 +27,7 @@ header {
     color: #fff;
     margin-left: 6px;
     margin-right: 20px;
+    text-decoration: none;
 }
 
 .header-buttons {
@@ -71,7 +72,7 @@ header {
     font-size: 24px;
     color: #c3baba;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .icon img {

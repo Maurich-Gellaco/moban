@@ -12,7 +12,7 @@ header {
     display: flex;
     align-items: center;
     padding: 12px;
-    background-color: #333;
+    background-color: #3333336f;
     width: 100vw; /* Full viewport width */
     position: fixed; /* Fixed positioning to keep header in place */
     top: 0;
@@ -27,6 +27,7 @@ header {
     color: #fff; /* Ensure logo text color is visible */
     margin-left: 6px;
     margin-right: 20px; /* Space between logo and buttons */
+    text-decoration: none;
 }
 
 .header-buttons {
@@ -72,7 +73,7 @@ header {
     font-size: 24px;
     color: #c3baba;
     cursor: pointer;
-    margin-left: 30px; /* Adjust space between icons */
+    margin-left: 20px; /* Adjust space between icons */
 }
 
 .icon img {
@@ -262,3 +263,4 @@ footer {
     color: #fff; /* Change link color on hover */
     text-decoration: underline;
 }
+
